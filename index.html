@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Commons/Wikivoyage Image Viewer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/commons-image-viewer.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="js/jquery-3.2.0.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/string-utils.js"></script>
+        <script src="js/array-utils.js"></script>
+        <script src="js/async-utils.js"></script>
+        <script src="js/log.js"></script>
+        <script src="js/cache.js"></script>
+        <script src="js/wikivoyage-api.js"></script>
+        <script src="js/commons-api.js"></script>
+        <script src="js/application.js"></script>
+
+        <div id="page-contents-block">
+            <div id="left-block">
+                <div id="buttons-block">
+                    <div>
+                        <div class="form-group">
+                            <label for="category">Категория Commons:</label>
+                            <input type="text" id="commonsCategory" name="commonsCategory" class="form-control" value="Akademgorodok_(Novosibirsk)" style="width: 300px">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" id="viewCommonsCategory">Просмотреть</button>
+                            <button type="submit" class="btn btn-primary" id="addCommonsCategory">Добавить</button>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div class="form-group">
+                            <label for="naturalHeritageCategory">Природные памятники:</label>
+                            <input type="text" id="naturalHeritageCategory" name="naturalHeritageCategory" class="form-control" value="Алтай" style="width: 300px">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" id="viewNaturalHeritageCategory">Просмотреть</button>
+                            <button type="submit" class="btn btn-primary" id="addNaturalHeritageCategory">Добавить</button>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div class="form-group">
+                            <label for="culturalHeritageCategory">Культурное наследие</label>
+                            <input type="text" id="culturalHeritageCategory" name="culturalHeritageCategory" class="form-control" value="Новосибирская_область/Новосибирск" style="width: 300px">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" id="viewCulturalHeritageCategory">Просмотреть</button>
+                            <button type="submit" class="btn btn-primary" id="addCulturalHerigateCategory">Добавить</button>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+                <div id="log-block">
+                    <div class="form-group">
+                        <label for="log">Лог</label>
+                        <textarea name="log" id="log" class="form-control" readonly="readonly"></textarea>
+                    </div>
+                </div>
+                <div id="cache-block">
+                    <div>
+                        <button type="submit" class="btn btn-primary" id="clearCache">Очистить локальный кеш</button>
+                    </div>
+                </div>
+            </div>
+            <div id="images-block">
+                <div>
+                    <ul class="pagination" id="topPaginator" style="margin: 5px"></ul>
+                </div>
+                <div id="images"></div>
+                <div>
+                    <ul class="pagination" id="bottomPaginator" style="margin: 5px"></ul>
+                </div>
+            </div>
+            <div id="favorites-block">
+                <div><b>Избранные</b></div>
+                <div id="favorite-images">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
